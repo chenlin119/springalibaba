@@ -1,0 +1,11 @@
+server:
+  port: 7001
+spring:
+  application:
+    name: order-seata
+  datasource:
+    url: jdbc:mysql://47.117.140.48:3306/order?useUnicode=true&characterEncoding=utf8&useSSL=false
+    username: root
+    password: Cx100544
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.cj.jdbc.Driver

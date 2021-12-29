@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: config-server
+  cloud:
+    nacos:
+      server-addr: 47.117.140.48:8847
+      username: nacos
+      password: nacos
+      config:
+        #读取配置文件后缀名
+        file-extension: yaml
+        #prefix: config-server-pro.yaml
+        namespace: pro
+        extension-configs:
+          - data-id: chenlin.properties
+            refresh: true
+        shared-configs[0]:
+          data-id: chenxin.properties
+          refresh: true
