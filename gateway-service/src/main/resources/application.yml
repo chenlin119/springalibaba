@@ -1,0 +1,19 @@
+server:
+  port: 7003
+spring:
+  application:
+    name: mygateway-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 47.117.140.48:8847
+        username: nacos
+        password: nacos
+    gateway:
+      routes:
+        - id: mygateway-route
+          uri: lb://order-seata-service
+          predicates:
+            - Path=/mygateway/**
+          filters:
+            - StripPrefix=1
